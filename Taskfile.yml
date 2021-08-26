@@ -1,0 +1,11 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  release-dev:
+    cmds:
+      - git push origin :refs/tags/v0.0.1-dev
+      - git tag -fa v0.0.1-dev
+      - git push origin v0.0.1-dev
+      - goreleaser --snapshot
