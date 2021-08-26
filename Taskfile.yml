@@ -8,4 +8,4 @@ tasks:
       - git push origin :refs/tags/v0.0.1-dev
       - git tag -fa v0.0.1-dev
       - git push origin v0.0.1-dev
-      - goreleaser --snapshot
+      - goreleaser release --auto-snapshot --rm-dist --skip-announce
