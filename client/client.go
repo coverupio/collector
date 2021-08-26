@@ -83,6 +83,8 @@ func apiURLForEnv(env, method string) string {
 	switch env {
 	case "local":
 		return fmt.Sprintf("http://localhost:4060/%s", method)
+	case "ngrok":
+		return fmt.Sprintf("https://coverup.eu.ngrok.io/%s", method)
 	default:
 		return fmt.Sprintf("https://coverup-enc-dr82.encoreapi.com/%s/%s", env, method)
 	}
