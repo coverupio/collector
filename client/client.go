@@ -22,6 +22,8 @@ func WithHTTPClient(cl *http.Client) Option {
 	}
 }
 
+// WithEnvironment sets the encore environment.
+// Use "local" for local testing.
 func WithEnvironment(env string) Option {
 	return func(c *Client) {
 		c.environment = env
